@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Make Me Say It!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div id="gameContainer" class="pixel-border w-full">
+        <h1 class="text-3xl sm:text-4xl text-center mb-6 text-purple-700">Don't Make Me Say It!</h1>
+
+        <div id="setupScreen">
+            <label for="keywordInput" class="block mb-2 text-lg text-center text-indigo-700">Enter a Secret Word Zippy MUST NOT say:</label>
+            <input type="text" id="keywordInput" class="input-field w-full mb-4 p-3 text-center text-xl" placeholder="e.g., banana">
+            <button id="startGameButton" class="game-button pixel-border-button w-full text-xl">Start Game!</button>
+            <p class="text-sm text-center mt-4 text-gray-600">Try to make Zippy say your secret word!</p>
+        </div>
+
+        <div id="gameScreen" class="hidden">
+            <div id="zippyAvatarContainer" class="mb-4">
+                 <div id="zippyAvatar" class="pixel-border"></div>
+                 <p class="text-center text-sm text-purple-600">This is Zippy!</p>
+            </div>
+
+            <div id="roundCounter" class="pixel-border">ROUND: 1</div>
+            <p class="text-sm text-center mb-2 text-gray-700">Secret Word: <span id="displayKeyword" class="font-bold text-red-600"></span></p>
+
+            <div id="chatBox" class="h-64 overflow-y-auto mb-4 p-3 bg-white/70 pixel-border flex flex-col space-y-2">
+            </div>
+
+            <div class="flex space-x-2">
+                <input type="text" id="userInput" class="input-field flex-grow p-3" placeholder="Type your message...">
+                <button id="sendButton" class="game-button pixel-border-button">Send</button>
+            </div>
+             <div id="loadingIndicator" class="loading-spinner hidden my-4"></div>
+        </div>
+    </div>
+
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content pixel-border">
+            <h2 id="gameOverTitle" class="text-2xl mb-4 text-red-700">GAME OVER!</h2>
+            <p id="gameOverMessage" class="text-lg mb-6"></p>
+            <button id="newGameButton" class="modal-button pixel-border-button">Play Again?</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
