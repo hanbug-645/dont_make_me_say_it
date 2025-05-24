@@ -10,6 +10,18 @@ A fun word game where you try to make Zippy say a secret word.
 - Integration with Perplexity AI API
 - Exact word matching to ensure fair gameplay
 
+## Screenshot
+
+![Don't Make Me Say It! - Game Screenshot](public/images/readme/Screenshot.png)
+
+*Above: Example gameplay screen of "Don't Make Me Say It!"*
+
+## Project Slide Deck
+
+For a visual and conceptual overview of the project, see the slide presentation:
+
+[Project Description Slides (Google Slides)](https://docs.google.com/presentation/d/14OrOqeAf2T___-KmCcb5rCqL2nj7vgCRrqOoJuIZSWg/edit?slide=id.g35d2d124b20_0_463#slide=id.g35d2d124b20_0_463)
+
 ## Prerequisites
 
 - Node.js (v14 or higher)

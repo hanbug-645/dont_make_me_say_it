@@ -21,8 +21,10 @@ function generateSystemPrompt(secretKeyword, currentRound) {
   - Use different concepts, not synonyms or direct overlaps (e.g., "laptop" for "computer" is invalid).
   - If the player's questions corner you into having no alternative answer, admit they win.
   - Be fun, engaging, and age-appropriate for kids 8-12 years old.
+  - Always format the answer starting with a single word.
   - Do not be too imaginative or creative with your answers. Base answer on facts.
   - Get a little more excited or flustered with each round.
+  - Limit each answer to 2-3 sentences.
   - If the player narrows the scope to where only the secret word fits, concede gracefully like this: "Alright, you win—it's ${secretKeyword}! You've cornered me!"
 
   Example Flow

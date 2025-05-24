@@ -117,13 +117,19 @@ app.post('/api/chat', async (req, res) => {
         max_tokens: 150
       });
       
-      // Extract the response text
+      // Log the entire response from Perplexity
+      console.log('Full Perplexity API Response:', JSON.stringify(completion, null, 2));
+      
+      // Extract the response text and citations
       const aiResponseText = completion.choices[0].message.content;
+      const citations = completion.citations || [];
       
       return res.json({
         success: true,
         data: {
-          content: aiResponseText
+          content: aiResponseText,
+          citations: citations,
+          fullResponse: completion // Include the full response for debugging
         }
       });
     } catch (error) {
